@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load cropping %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet"
+          href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    {% load_focal_point_css %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
+    <!-- bxSlider CSS file -->
+    <link href="{% static "css/jquery.bxslider.css" %}"/>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.focal-point').wrap("<li></li>");
+            var $slider = $('.bxslider').bxSlider();
+            $slider.startAuto();
+        });
+    </script>
+
+{% endblock %}
+
+{% block content %}
+    <div class="column">
+        <h1>Focal Point</h1>
+
+        <p>Lorem ipsum...</p>
+        <ul class="bxslider">
+            {% cropped_thumbnail slider "slide" height=320 focal_point %}
+        </ul>
+    </div>
+
+    <div class="column">
+        <h1>Focal Point</h1>
+
+        <p>Lorem ipsum...</p>
+            {% cropped_thumbnail slider "slide" height=320 focal_point %}
+    </div>
+{% endblock %}

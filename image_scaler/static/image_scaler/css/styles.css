@@ -1,0 +1,200 @@
+.ajaximage {
+    width: 100%;
+}
+
+.jcrop-holder {
+    width: 70%;
+    float: left;
+}
+.jcrop-holder img {
+    width: 100%;
+}
+.image-preview-container label {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.image-preview-container {
+    width: 100%;
+    float: left;
+}
+.ajaximage .progress {
+    background: #333;
+}
+
+.ajaximage a.link:hover img {
+    opacity: 0.8;
+}
+
+/* inactive */
+
+.ajaximage .progress,
+.ajaximage .link,
+.ajaximage .remove,
+.ajaximage input.fileinput {
+    display: none;
+}
+.ajaximage input.image-ratio-enabled {
+    height: 20px;
+    float: left;
+}
+/* active progress */
+.ajaximage.progress-active .progress {
+    display: block;
+}
+
+/* active image */
+.ajaximage.img-active .link {
+    display: block;
+}
+
+.ajaximage.img-active .remove {
+    display: inline-block;
+    width: 10%;
+    float: left;
+    font-weight: bold;
+    padding: 5px 0 10px 50px;
+}
+
+/* active form */
+.ajaximage.form-active input {
+    display: block;
+}
+
+/* jcrop styles */
+div.jcrop-holder {
+    float: left;
+}
+
+.jcrop-holder-warning {
+    display: none;
+    color: red;
+}
+
+.image_preview_container {
+    margin-left: 20px;
+}
+
+/* styles for size-warning */
+div.jcrop-image.size-warning .jcrop-vline {
+    border: 1px solid red;
+    background: none;
+}
+
+div.jcrop-image.size-warning .jcrop-hline {
+    border: 1px solid red;
+    background: none;
+}
+
+.img_preview {
+    position: relative;
+    float: left;
+}
+
+.image_ul::after {
+    margin-bottom: 30px;
+}
+
+/* focal point grid styles */
+table.focal_point_selector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-collapse: collapse;
+    border: none;
+    background: transparent;
+}
+
+table.focal_point_selector td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer
+}
+
+table.focal_point_selector td:hover {
+    background-color: #ff0101;
+    opacity: 0.4
+}
+
+li.image_select {
+    display: inline-block;
+    padding: 2px;
+}
+
+.image_ul_clear {
+    padding-bottom: 70px;
+}
+
+/*pagination*/
+h1, h2,ul {
+	clear: both;
+}
+
+ul.pagination1 li:hover,
+ul.pagination2 li:hover,
+ul.pagination3 li:hover {
+	background-color: #FF9500;
+}
+
+ul.pagination1 li,
+ul.pagination2 li,
+ul.pagination3 li {
+    padding: 10px;
+    font-family: georgia;
+	background-color: #8890FC;
+    font-size: 24px;
+    color: #fff;
+    line-height: 1;
+    width: 600px;
+    margin-bottom: 1px;
+	list-style:none;
+}
+
+ul.red {
+	outline:10px solid red;
+}
+
+
+ul.simplePagerNav li{
+    display:block;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: georgia;
+	font-size:14px;
+}
+
+ul.simplePagerNav li a{
+    color: #333;
+    text-decoration: none;
+}
+
+li.currentPage {
+	background: red;
+    background: rgb(65,118,144);
+}
+
+ul.simplePagerNav li.currentPage a {
+	color: rgb(244,243,121);
+}
+
+table.pageme {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table.pageme td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+div.space-clear {
+    height: 20px;
+    width: 100%;
+}
+
+.gallery_container ul.radio_ul {
+    padding-left: 0;
+    margin-left: 0;
+}

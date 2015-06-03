@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load cropping thumbnail %}
+
+
+{% block content %}
+        <a href="{% url 'admin:index' %}">Admin</a> | </<br/>
+        <a href="/demo/show_thumbnail/1/">Thumbnail example</a> | </<br/>
+{% endblock %}
