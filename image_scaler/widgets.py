@@ -155,7 +155,6 @@ class SlideRatioCropWidget(widgets.TextInput):
                 gallery_output=gallery_output,
                 gallery_new_element_template=new_gallery_item,
                 name=name)
-            return mark_safe(unicode(output))
         else:
             gallery_output = self._get_single(value, name, upload_url, element_id,
                                               thumbnail_uploads_list)
@@ -244,7 +243,7 @@ class SlideRatioCropWidget(widgets.TextInput):
                 name=name,
                 element_id=element_id,
                 last_index=str(len(slides)))
-            return gallery_output
+        return gallery_output
 
     def _get_new_item(self, upload_url, element_id, name, thumbnail_uploads_list):
         """
@@ -277,7 +276,6 @@ class SlideRatioCropWidget(widgets.TextInput):
         for value in data.getlist(name + '[]'):
             if len(value.split(':')) == 6:
                 slides_list.append(value)
-
         return ':|:'.join(slides_list)
 
     def _get_file_path(self, slide):
@@ -289,7 +287,6 @@ class SlideRatioCropWidget(widgets.TextInput):
         value_parts = slide.split(':')
         if len(value_parts) == 6:
             file_path = value_parts[0]
-
         return file_path
 
     def _get_thumbnail_uploads_list(self):
@@ -320,5 +317,4 @@ class SlideRatioCropWidget(widgets.TextInput):
                     continue
             else:
                 continue
-
         return thumbnail_uploads_list
